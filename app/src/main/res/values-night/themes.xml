@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Presensi_qr" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Dark mode colors (using slightly adjusted palette for dark mode readability) -->
+        <item name="colorPrimary">#6366F1</item> <!-- Indigo 500 -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#818CF8</item> <!-- Indigo 400 -->
+        <item name="android:colorBackground">#111827</item> <!-- Gray 900 -->
+        <item name="colorSurface">#1F2937</item> <!-- Gray 800 -->
+        <item name="colorOnBackground">#F9FAFB</item> <!-- Gray 50 -->
+        <item name="colorOnSurface">#F3F4F6</item> <!-- Gray 100 -->
+        <item name="colorError">#F87171</item> <!-- Red 400 -->
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">#111827</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

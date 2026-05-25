@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+            
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="?attr/colorPrimary"
+                android:background="@drawable/ic_launcher_background"
+                android:layout_marginEnd="16dp"/>
+                
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Halo,"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:alpha="0.7"/>
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 1. Tombol Scan/Action -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E5E7EB"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:contentPadding="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_action_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@android:drawable/ic_menu_camera"
+                    app:tint="?attr/colorPrimary"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/tv_action_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scan QR Code"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_action_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ketuk untuk melakukan presensi sekarang"
+                    android:textAlignment="center"
+                    android:textColor="?attr/colorOnSurface"
+                    android:alpha="0.7"
+                    android:layout_marginBottom="32dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="MULAI SCAN"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Tombol Ajukan Dispensasi (Khusus Siswa) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply_dispensation"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ajukan Dispensasi"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_agenda"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 1.5 Tombol Tambah Mata Pelajaran (Khusus Guru) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_subject"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Tambah Mata Pelajaran"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_add"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tombol Kelola Jadwal Mengajar (Khusus Guru) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_manage_schedule"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Kelola Jadwal Mengajar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_today"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+
+        <!-- Tombol Tambah Guru (Khusus Operator) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_teacher"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Tambah Akun Guru"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_myplaces"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tombol Tambah Operator (Khusus Operator) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_operator"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Tambah Akun Operator"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_manage"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tombol Reset Kredensial Siswa (Khusus Operator) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset_student"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Reset Kredensial Siswa"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_edit"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tombol Kelola Kelas & Tahun Masuk (Khusus Operator) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_manage_class_year"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Kelola Kelas &amp; Tahun Masuk"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_today"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 2. Card Info Absen / Riwayat -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_attendance_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/colorSuccess"
+            app:cardBackgroundColor="@color/colorSuccessLight">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+                
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/checkbox_on_background"
+                    app:tint="@color/colorSuccess"
+                    android:layout_marginEnd="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Absensi Hari Ini"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSuccess"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anda sudah berhasil absen pada:"
+                        android:textColor="@color/colorSuccess"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Detail Mapel - Guru"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorSuccess"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
