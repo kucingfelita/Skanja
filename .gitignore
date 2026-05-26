@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Backend Folder
+/api.wahyuindrasetiawan.my.id/
